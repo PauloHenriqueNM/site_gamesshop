@@ -4,16 +4,16 @@
     box-sizing: border-box;
 }
 
+body, input, textarea {
+    font-family: 'Roboto', sans-serif;
+    background-color: #e9f3d9;
+}
+
 header,
 section h2,
 section h3 {
     font-family: 'Bungee', cursive;
     font-weight: normal;
-}
-
-body, input, textarea {
-    font-family: 'Roboto', sans-serif;
-    background-color: #e9f3d9;
 }
 
 header {
@@ -27,6 +27,11 @@ section h2 {
     font-weight: normal;
 }
 
+header nav ul {
+    list-style: none;
+    padding: 0;
+}
+
 header nav li {
     display: inline;
     margin-left: 16px;
@@ -34,7 +39,7 @@ header nav li {
 }
 
 header nav li a {
-    color:  #ecf0f1;
+    color: #ecf0f1;
     text-decoration: none;
 }
 
@@ -60,13 +65,13 @@ section .contanier {
     margin-right: 8px;
 }
 
-section .contanier{
+section .contanier {
     align-items: flex-start;
 }
 
 section {
     padding: 24px 0;
-    color: #3d94a0;;
+    color: #3d94a0;
 }
 
 section h2 {
@@ -103,9 +108,10 @@ section .fachada {
     display: block;
 }
 
-.contatc-methods{
+.contatc-methods {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 form input,
@@ -127,14 +133,14 @@ section h3 {
 }
 
 form button {
-    background-color:  #3d94a0;
+    background-color: #3d94a0;
     color: #ecf0f1;
     border: none;
     cursor: pointer;
 }
 
 form button:hover {
-    background-color:#5dcac5;
+    background-color: #5dcac5;
     border-radius: 12px;
     transform: scale(1.03);
 }
@@ -146,8 +152,55 @@ input:focus, textarea:focus {
 }
 
 footer {
-    background-color:  #3d94a0;
+    background-color: #3d94a0;
     color: #ecf0f1;
     padding: 16px 0;
     text-align: center;
+}
+
+/* Responsivo para telas menores que 768px */
+@media (max-width: 768px) {
+    header nav li {
+        display: block;
+        margin: 8px 0;
+    }
+
+    .contanier {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    section .fachada {
+        margin: 0 auto;
+        width: 98%;
+    }
+
+    #sobreloja h2 {
+        margin-top: 1rem;
+    }
+
+    section .contanier {
+        flex-direction: column;
+    }
+
+    form input,
+    form textarea,
+    form button {
+        width: 100%;
+
+    }
+
+    .contatc-methods {
+        flex-direction: column;
+    }
+
+    .social-links {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #contatc {
+        text-align: center;
+    }
 }
